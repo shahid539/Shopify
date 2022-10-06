@@ -1,0 +1,94 @@
+
+<div class="msb-logo" style="background-color: #eba900;">
+    <div class="page-width pw pwaa ">
+      <div class="msb-logo1 msb-logo-padding">
+      {% for block in section.blocks %}
+          <div class="col-2 col-md-2 ">
+              <div class="inner-column">
+                  <img class="banner-img" src="{{ block.settings.img  | img_url: 'master' }}">
+              </div>
+          </div>
+        {% endfor %}
+        
+      </div>
+    </div>
+  </div>
+
+{% schema %}
+  {
+    "name": "logo banner",
+    "settings": [],
+    "blocks": [
+    {
+        "type": "logo",
+        "name": "add logo",
+        "settings": [
+            {
+                "type": "image_picker",
+                "id": "img",
+                "label": "add logo"
+            }
+        ]
+    }
+],
+    "presets":[
+      {
+      "name": "logo banner"
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
+
+<style>
+
+  img.banner-img {
+    width: 150% !important;
+}.inner-column {
+    max-width: 60%;
+    margin: auto;
+}
+  .col-2.col-md-2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 0 0 auto;
+    width: 16.66666667%;
+    padding: 2%;
+    text-align: center;
+  }
+  .msb-logo1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+  .page-width.pw {
+    max-width: 146rem;
+    margin-left: auto!important;
+    margin-right: auto!important;
+}
+
+
+  @media only screen and (max-width: 768px){
+    .msb-logo1 {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row !important;
+}
+    .col-2.col-md-2 {
+    width: 20%;
+    padding: 3%;
+}
+    img.banner-img {
+    margin: 26px 0px;
+}
+    .inner-column {
+    max-width: 80%;
+}
+  }
+</style>
