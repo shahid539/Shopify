@@ -1,0 +1,14 @@
+<script>
+  if (window.matchMedia("(max-width: 768px)").matches)
+  {
+$(document).ready(function(){
+$('#multiple-items').slick({
+  dots: true,
+  infinite: true,
+  speed: 300,
+  slidesToShow: 1,
+  adaptiveHeight: true
+});
+});
+  };
+</script>
