@@ -1,0 +1,47 @@
+
+------Sticky slider------
+
+
+
+.header-wrapper {
+  display: block;
+  position: relative;
+  background-color: rgb(var(--color-background));
+}
+
+.header-wrapper--border-bottom {
+  border-bottom: 0.1rem solid rgba(var(--color-foreground), 0.08);
+}
+
+.header {
+  display: grid;
+  grid-template-areas: 'left-icon heading icons';
+  grid-template-columns: 1fr 2fr 1fr;
+  align-items: center;
+  }
+.header-wrapper {position: absolute;width: 100%;}
+.shopify-section-header-sticky .header-wrapper {
+}
+
+
+		-------Slick Slider for mobile only-------
+
+
+<script>
+  if (window.matchMedia("(max-width: 768px)").matches)
+  {
+$(document).ready(function(){
+$('#multiple-items').slick({
+  dots: true,
+  infinite: true,
+  speed: 300,
+  slidesToShow: 1,
+  adaptiveHeight: true
+});
+});
+  };
+</script>
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/vEIK9wIMOIY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
