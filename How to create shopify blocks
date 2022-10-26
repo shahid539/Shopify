@@ -1,0 +1,48 @@
+{
+    "name": "really_great_mob",
+    "settings": [
+      {
+			"type": "image_picker",
+			"id": "tab_icon",
+			"label": "Choose Image of tab icon"
+		},
+		{
+          "type": "text",
+          "id": "realy_head",
+          "label": "write heading"
+        },
+		
+		{
+          "type": "richtext",
+          "id": "sub_head",
+          "label": "section sub heading"
+        }
+		],
+    "blocks": [
+    {
+        "type": "clouds",
+        "name": "content cloud",
+        "settings": [
+           {
+                "type": "text",
+                "id": "cont_head",
+                "label": "your text",
+                "default": "my vital content"
+          },
+          {
+                "type": "richtext",
+                "id": "cont_txt",
+                "label": "write your Text",
+                "default": "<p>It is a long fact that a reader .</p>"
+            }
+        ]
+    }
+],
+	 "presets": [
+    {
+      "name": "really_great_mob",
+      "blocks": [
+      ]
+    }
+  ]
+  }
